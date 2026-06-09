@@ -27,9 +27,7 @@
       };
 
       function reset(){
-        score.wins = 0;
-        score.losses = 0;
-        score.ties = 0;
+        JSON.parse(localStorage.getItem('score'))
         updatedScore();
       }
 
@@ -101,6 +99,8 @@
           updatedScore();
         }
       }
+      localStorage.setItem('score', JSON.stringify(score));
+
     </script>
   </body>
 </html>

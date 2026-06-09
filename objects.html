@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    // const prdts = {
+    //   name: 'socks',
+    //   price : 1090
+    // }
+    // console.log(prdts)
+    // console.log(prdts.name);
+
+    // prdts.name = 'cotton socks';
+    // console.log(prdts);
+    
+    // prdts.mfg_year = '2026'
+    // console.log(prdts);
+    // console.log(prdts.mfg_year)
+
+    // delete prdts.mfg_year;
+    // console.log(prdts)
+
+    // console.log(typeof prdts)
+
+    const p2 = {
+      name: 'shirt',
+      rating: {              //nested object
+        stars: 4.5,
+        count: 87
+      },
+      fun: function f1(){
+        console.log('function inside object')
+      }
+    }
+    console.log(p2.rating.stars)
+    p2.fun();
+
+    console.log(typeof console)
+    console.log(typeof console.log)
+
+    console.log(JSON.stringify(p2))
+    console.log(typeof JSON.stringify(p2))
+
+    const jsonstring = JSON.stringify(p2);
+    console.log(JSON.parse(jsonstring))
+
+    localStorage.setItem('message', 'Hello!')
+    console.log(localStorage.getItem('message'))
+    
+
+  </script>
+</body>
+</html> 
