@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlipFLop Game</title>
+</head>
+<body>
+
+  <script>
+    // let result ;
+    let guess;
+    let flip = Math.random();
+      // if(flip < 0.5){
+      //   result = 'heads';
+      // }
+      // else{
+      //   result = 'tails';
+      // }
+      // console.log(result)
+      guess = 'heads';
+    let result = (flip < 0.5) ? 'heads' : 'tails' ;
+    console.log(result);
+    if (guess === result){
+      console.log('You win!')
+    }
+    else{
+      console.log('You lose!')
+    }
+  </script>
+
+</body>
+</html>

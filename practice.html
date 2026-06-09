@@ -8,8 +8,31 @@
 <body>
 
   <script>
-    let hour;
-    
+    const name = 'Neha';
+
+    const currentTime = new Date();
+    const hour = currentTime.getHours();
+    console.log(hour);
+
+    if (hour >= 6 && hour <= 12){
+      console.log(`Good Morning ${name}`);
+    }
+    else if(hour >= 13 && hour <= 17){
+      console.log(`Good Afternoon! ${name}`)
+    }
+    else{
+      console.log(`Good Night! ${name}`)
+    }
+
+    let age =70;
+    const isHoliday = false;
+    if((age >= 65 || age <=6) && !isHoliday){
+      console.log(`You are eligible for the discount!`)
+    }
+    else{
+      console.log(`You are not eligible`)
+    }
+
   </script>
 </body>
 </html>
