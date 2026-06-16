@@ -32,7 +32,7 @@
       if(cost < 40 ) {
         cost = cost + 10;
       }
-      document.querySelector('.cost-total').innerHTML = `$${cost}`
+      document.querySelector('.cost-total').innerHTML = `$${cost.toFixed(2)}`
     }
     function subscribe(){
       const btnElement = document.querySelector('.sub-btn');

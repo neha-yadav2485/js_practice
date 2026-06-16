@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+</head>
+<body>
+
+  <input placeholder="Type something" onkeyup="keyUp(event)">
+  <p class='display'></p>
+
+  <script>
+
+    function keyUp(event){
+      const text = event.target.value;
+      document.querySelector('.display').innerHTML = text;
+    }
+
+  </script>
+</body>
+</html>
