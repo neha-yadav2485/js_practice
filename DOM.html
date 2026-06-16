@@ -4,20 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOM</title>
+  <style>
+    button{
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <button>Hello</button>
-  <button class = 'js-btn'>second Button</button>
+  <!-- <button>Hello</button>
+  <button class = 'js-btn'>second Button</button> -->
+  <button>9a</button> <br><br>
+  <button class="second-btn">9b</button> <br><br>
+  <button onclick="heads()">Heads</button>
+  <button onclick="tails()">Tails</button>
+  <p id="display"></p>
+  <input placeholder="your name" class="nm-display" onkeydown="handleName(event)">
+  <button onclick="result()">Submit</button>
+  <p class="name-display"></p>
   <script>
+    
+    // String = '24'
+    // console.log('24'-5) //type coercion  it's outcome is number because of - operator
+    // console.log('24'+5) //type coercion  it's outcome is string because of + operator
 
-    document.querySelector('button');
-    console.log(document.querySelector('button').innerHTML);
-    console.log(document.querySelector('.js-btn'));
+    // document.querySelector('button');
+    // console.log(document.querySelector('button').innerHTML);
+    // console.log(document.querySelector('.js-btn'));
 
     // document.body.innerHTML = 'hello';
     // document.title = 'Dom';
 
     // console.log(document.body.innerHTML);
+
+    console.log(document.querySelector('button'));
+    console.log(document.querySelector('.second-btn').innerHTML = '9b done!')
+
+    function heads(){
+      document.querySelector('#display').innerHTML = 'You chose: HEADS'
+    }
+
+    function tails(){
+      document.querySelector('#display').innerHTML = 'You chose: TAILS'
+    } 
+
+    function handleName(event){
+      if(event.key === 'Enter') {
+        result();
+      }
+    }
+
+    function result(){
+     const inputElement =  document.querySelector('.nm-display');
+     let name = inputElement.value;
+     document.querySelector('.name-display').innerHTML = `Your name is ${name}`
+    }
+
   </script>
   
 </body>

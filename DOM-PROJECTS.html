@@ -7,19 +7,34 @@
 </head>
 <body>
   <p>YouTube Subscribe Button</p>
-  <button onclick="button()" class="sub-btn">Subscribe</button>
+  <button onclick="subscribe()" class="sub-btn">Subscribe</button>
   <br>
   <br>
-
-  <p>Rock Paper Scissors</p>
 
   <p>Amazon Shipping Calculator</p>
   <p>Orders under $40 = +$10 shipping</p>
   <p>Orders above $40 = FREE shipping</p>
-  <button placeholder="cost"></button>
+  <input placeholder="Cost of order" class="cost-btn" onkeydown="handleCostKeydown(event)">
+  <button onclick="calculateTotal()">Calculate</button>
+  <p class="cost-total"></p>
 
   <script>
-    function button(){
+
+    function handleCostKeydown(event){
+      if(event.key === 'Enter') {
+        calculateTotal();
+      }
+    }
+
+    function calculateTotal(){
+      const inputElement = document.querySelector('.cost-btn ');
+      let cost = Number(inputElement.value);   //string to number
+      if(cost < 40 ) {
+        cost = cost + 10;
+      }
+      document.querySelector('.cost-total').innerHTML = `$${cost}`
+    }
+    function subscribe(){
       const btnElement = document.querySelector('.sub-btn');
       if(btnElement.innerHTML === 'Subscribe') {
         btnElement.innerHTML = 'Subscribed';
