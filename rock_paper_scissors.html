@@ -6,20 +6,41 @@
   <title>Rock Paper Scissors</title>
 
   <style>
+    body{
+      background-color: rgb(25, 25, 25);
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
     button {
       cursor: pointer;
     }
+    .title{
+      font-size: 30px;
+    }
+    .move-icons{
+      height: 50px;
+    }
+    .move-btn{
+      background-color: transparent;
+      border: 3px solid white;
+      width: 120px;
+      height: 120px;
+      border-radius: 60px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
   </style>
 </head>
 
 <body>
-  <p>Rock Paper Scissors</p>
+  <p class="title">Rock Paper Scissors</p>
 
-  <button onclick="playGame('rock')">Rock</button>
-  <button onclick="playGame('paper')">Paper</button>
-  <button onclick="playGame('scissor')">Scissors</button>
+  <button onclick="playGame('rock')" class="move-btn"><img src="images/rock-emoji.png" alt="Rock" class="move-icons"></button>
+  <button onclick="playGame('paper')" class="move-btn"><img src="images/paper-emoji.png" alt="Paper" class="move-icons"></button>
+  <button onclick="playGame('scissor')" class="move-btn"><img src="images/scissors-emoji.png" alt="Scissors" class="move-icons"></button>
 
-  <p id="display"></p>
+  <p id="display">You Win</p>
 
   <p id="scoreCard"></p>
 
